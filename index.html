@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- ============ FONT ============ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- ============ style sheets ============ -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body class="position-relative">
+
+
+
+<!-- ====================== main page ======================  -->
+
+<div class="container d-flex flex-column justify-content-center align-items-center  py-5">
+    <h1 class="mb-5">Bookmarker</h1>
+    <div class="bookmark-body d-flex flex-column justify-content-center align-items-center w-100 gap-4 py-3">
+        <div class="d-flex justify-content-center align-items-center color">
+            <i class="fa-solid fa-bookmark pe-2"></i>
+            <h2>Bookmark your favorite sites</h2>
+            <i class="fa-solid fa-bookmark ps-2"></i>
+        </div>
+        
+        <div class="inputsData w-100">
+            <div class="mb-4">
+                <label class="fw-semibold pb-3" for="siteName"> <i class="fa-solid fa-book-bookmark pe-2"></i> Site
+                    Name</label>
+                    <input type="text" id="siteName" placeholder="Bookmark Name" class="form-control" oninput="typing(siteName,nameRegex)">
+                </div>
+                <div class="mb-4">
+                    <label class="fw-semibold pb-3" for="siteURL"> <i class="fa-solid fa-link pe-2"></i> Site
+                        URL</label>
+                        <input type="text" id="siteURL" placeholder="Website URL" class="form-control" oninput="typing(siteURL,urlRegex)">
+                    </div>
+                    
+                </div>
+                <button onclick="addBtn()" class="btn btn-danger px-5 py-1 mb-2 ">Submit</button>
+            </div>
+            <table class="table text-center bg-light mt-4">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableData">
+                    
+                </tbody>
+            </table>
+        </div>
+        
+
+        <!-- ====================== alert box ======================  -->
+        
+        <div id="boxMsg" class="box-info position-absolute start-0 top-0 w-100 vh-100 d-flex justify-content-center align-items-center d-none ">
+        <div class="errorMsg bg-white  d-flex flex-column gap-3 rounded-3 shadow-lg">
+            <div class="begin d-flex justify-content-between align-items-center">
+                <div class="circls d-flex justify-content-center">
+                    <div class="rounded-circle circle me-2 bg-primary"></div>
+                    <div class="rounded-circle circle me-2 bg-danger"></div>
+                    <div class="rounded-circle circle me-2 bg-info"></div>
+                </div>
+    
+                
+                <button  onclick="closeAlert()" id="closeBtn" class="btn  border-0">
+                <i class="fa-solid fa-xmark fw-bolder fs-3"></i>
+                </button>
+            </div>
+    
+            <h3>Site Name or Url is not valid, Please follow the rules below :</h3>
+            <div class="d-flex align-items-center gap-3">
+                <i class="fa-regular fa-circle-right  text-danger"></i>
+                <p class="m-0">Site name must contain at least 3 characters</p>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+                <i class="fa-regular fa-circle-right  text-danger"></i>
+                <p class="m-0">Site URL must be a valid one</p>
+            </div>
+    
+        </div>
+    </div>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
