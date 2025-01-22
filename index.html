@@ -23,25 +23,31 @@
 <!-- ====================== main page ======================  -->
 
 <div class="container d-flex flex-column justify-content-center align-items-center  py-5">
-    <h1 class="mb-5">Bookmarker</h1>
+    <h1 class="mb-5">Watania for Trading & Constructing</h1>
     <div class="bookmark-body d-flex flex-column justify-content-center align-items-center w-100 gap-4 py-3">
         <div class="d-flex justify-content-center align-items-center color">
             <i class="fa-solid fa-bookmark pe-2"></i>
-            <h2>Bookmark your favorite sites</h2>
+            <h2>Entry Details</h2>
             <i class="fa-solid fa-bookmark ps-2"></i>
         </div>
         
         <div class="inputsData w-100">
             <div class="mb-4">
-                <label class="fw-semibold pb-3" for="siteName"> <i class="fa-solid fa-book-bookmark pe-2"></i> Site
-                    Name</label>
-                    <input type="text" id="siteName" placeholder="Bookmark Name" class="form-control" oninput="typing(siteName,nameRegex)">
+                <label class="fw-semibold pb-3" for="entryNumber"> <i class="fa-solid fa-book-bookmark pe-2"></i> Entry Number</label>
+                    <input type="number" id="entryNumber" placeholder="Write Entry Number.." class="form-control" oninput="typing(entryNumber,nameRegex)">
                 </div>
                 <div class="mb-4">
-                    <label class="fw-semibold pb-3" for="siteURL"> <i class="fa-solid fa-link pe-2"></i> Site
-                        URL</label>
-                        <input type="text" id="siteURL" placeholder="Website URL" class="form-control" oninput="typing(siteURL,urlRegex)">
-                    </div>
+                    <label class="fw-semibold pb-3" for="projectCode"> <i class="fa-solid fa-link pe-2"></i> Project Code</label>
+                        <input type="text" id="projectCode" placeholder="Write Project Code" class="form-control" oninput="typing(projectCode,urlRegex)">
+                </div>
+            <div class="mb-4">
+                <label class="fw-semibold pb-3" for="totalCost"> <i class="fa-solid fa-book-bookmark pe-2"></i> Total Cost</label>
+                    <input type="text" id="totalCost" placeholder="Total Cost" class="form-control" oninput="typing(totalCost,nameRegex)">
+                </div>
+                <div class="mb-4">
+                    <label class="fw-semibold pb-3" for="poNumber"> <i class="fa-solid fa-link pe-2"></i> PO Number</label>
+                        <input type="text" id="poNumber" placeholder="PO Number" class="form-control" oninput="typing(poNumber,urlRegex)">
+                </div>
                     
                 </div>
                 <button onclick="addBtn()" class="btn btn-danger px-5 py-1 mb-2 ">Submit</button>
@@ -50,13 +56,17 @@
                 <thead>
                     <tr>
                         <th>Index</th>
-                        <th>Website Name</th>
-                        <th>Visit</th>
-                        <th>Delete</th>
+                        <th>Entry Num</th>
+                        <th>Project</th>
+                        <th>Value</th>
+                        <th>PO Num</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody id="tableData">
                     
+                    
+
                 </tbody>
             </table>
         </div>
